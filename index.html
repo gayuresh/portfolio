@@ -60,12 +60,12 @@
     <h2>Portfolio</h2>
     <!-- Portfolio Item -->
     <div class="projects-grid">
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 1"></div>
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 2"></div>
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 3"></div>
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 4"></div>
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 5"></div>
-      <div class="portfolio-item project-card" onclick="openModal()"><img src="#" alt="Portfolio 6"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal1')"><img src="#" alt="Portfolio 1"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal2')"><img src="#" alt="Portfolio 2"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal3')"><img src="#" alt="Portfolio 3"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal4')"><img src="#" alt="Portfolio 4"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal5')"><img src="#" alt="Portfolio 5"></div>
+      <div class="portfolio-item project-card" onclick="openModal('projectModal6')"><img src="#" alt="Portfolio 6"></div>
     </div>
   <!-- Modal Popup -->
   <div class="modal" id="projectModal1">
@@ -277,11 +277,13 @@ footer {
   /*width: 200px;
   margin: 10px;*/
 }
+  
 .portfolio-item img {
   width: 100%;
   border-radius: 10px;
   transition: transform 0.3s;
 }
+  
 .portfolio-item img:hover {
   transform: scale(1.05);
 }
@@ -319,103 +321,27 @@ footer {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
-
 </style>
 
 <script>
-  function openModal() {
-    document.getElementById('projectModal1').style.display = 'flex';
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
   }
 
   function closeModal() {
-    document.getElementById('projectModal1').style.display = 'none';
+    // Hide all modals
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.style.display = 'none';
+    });
   }
 
   // Close modal if clicked outside the content
   window.onclick = function(e) {
-    const modal = document.getElementById('projectModal1');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
-
-  function openModal() {
-    document.getElementById('projectModal2').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal2').style.display = 'none';
-  }
-
-  // Close modal if clicked outside the content
-  window.onclick = function(e) {
-    const modal = document.getElementById('projectModal2');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
-
-  function openModal() {
-    document.getElementById('projectModal3').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal3').style.display = 'none';
-  }
-
-  // Close modal if clicked outside the content
-  window.onclick = function(e) {
-    const modal = document.getElementById('projectModal3');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
-
-  function openModal() {
-    document.getElementById('projectModal4').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal4').style.display = 'none';
-  }
-
-  // Close modal if clicked outside the content
-  window.onclick = function(e) {
-    const modal = document.getElementById('projectModal4');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
-
-  function openModal() {
-    document.getElementById('projectModal5').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal5').style.display = 'none';
-  }
-
-  // Close modal if clicked outside the content
-  window.onclick = function(e) {
-    const modal = document.getElementById('projectModal5');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
-
-  function openModal() {
-    document.getElementById('projectModal6').style.display = 'flex';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal6').style.display = 'none';
-  }
-
-  // Close modal if clicked outside the content
-  window.onclick = function(e) {
-    const modal = document.getElementById('projectModal6');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
   };
 </script>
+
