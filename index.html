@@ -20,16 +20,16 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT ME</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h2>ABOUT ME</h2>
     <h4>Hello, I’m Gayathri Suresh - a WordPress Developer</h4>
     <p>➢ Specialized in WordPress and Elementor with 3 years of Experience.</p>
     <p>➢ Developed 6+ responsive websites for key clients using WordPress and Elementor.</p>
@@ -40,15 +40,15 @@
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <h4>Web Development</h4>
+    <h2>SKILLS</h2>
+    <h4 class="skills1">➢ Web Development</h4>
       <ul>
         <li>WordPress</li>
         <li>Elementor</li>
         <li>HTML</li>
         <li>CSS</li>
       </ul>
-    <h4>Design Tools</h4>
+    <h4 class="skills2">➢ Design Tools</h4>
       <ul>
         <li>Figma</li>
         <li>Photoshop</li>
@@ -57,7 +57,7 @@
   </section>
   
   <section id="portfolio">
-    <h2>Portfolio</h2>
+    <h2>PORTFOLIO</h2>
     <!-- Portfolio Item -->
     <div class="projects-grid">
       <div class="portfolio-item project-card" onclick="openModal('projectModal1')"><img src="#" alt="Portfolio 1"></div>
@@ -131,8 +131,8 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:gayathrisuresh1021@gmail.com">gayathrisuresh1021@gmail.com</a></p>
+    <h2>CONTACT ME</h2>
+    <p>➢ Email: <a href="mailto:gayathrisuresh1021@gmail.com">gayathrisuresh1021@gmail.com</a></p>
   </section>
 
   <footer>
@@ -250,12 +250,43 @@ section {
   box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+section h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+section#about p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+section#skills li {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  list-style-type: square;
+}
+
+h4.skills2 {
+  margin-top: 20px;
+}
+  
 section#about {
   margin-top: 200px;
 }
 
 section#skills ul {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 section#contact {
