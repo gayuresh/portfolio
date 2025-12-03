@@ -43,16 +43,21 @@
     <h2>SKILLS</h2>
       <div class="skills-wrapper">
         <div class="skill-column">
-          <h4 class="skills1">➢ Web Development</h4>
+          <h4 class="skills1">➢ CMS & Page Builders</h4>
           <ul>
             <li>WordPress</li>
             <li>Elementor</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4 class="skills2">➢ Front-End Development</h4>
+          <ul>
             <li>HTML</li>
             <li>CSS</li>
           </ul>
         </div>
         <div class="skill-column">
-          <h4 class="skills2">➢ Design Tools</h4>
+          <h4 class="skills3">➢ Design Tools</h4>
           <ul>
             <li>Figma</li>
             <li>Photoshop</li>
@@ -300,8 +305,9 @@ section#skills li {
 
 .skills-wrapper {
    display: grid;
-   grid-template-columns: 2fr 3fr;
-   gap: 40px;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   align-items: start;
    /* width: 50%; */
 }
   
@@ -470,6 +476,7 @@ section#contact {
     });
   };
 </script>
+
 
 
 
